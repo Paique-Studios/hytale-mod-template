@@ -3,6 +3,14 @@
 
 A **template** for creating plugins/mods for the Hytale Server.
 
+---
+Take a look at https://github.com/Paique-Studios/run-hytale too!
+It installs and runs the server for you.
+
+You can uncomment the 74-79 lines in `build.gradle.kts` to run the server from intelij with debug.
+You need to compile the plugin, and then import the jar.
+---
+
 ## How to Use This Template
 
 ### Prerequisites
@@ -14,7 +22,7 @@ A **template** for creating plugins/mods for the Hytale Server.
 
 **Step 1**: Clone or copy this template to your project
 ```bash
-git clone <repo-url> my-plugin-hytale
+git clone https://github.com/Paique-Studios/hytale-mod-template my-plugin-hytale
 cd my-plugin-hytale
 ```
 
