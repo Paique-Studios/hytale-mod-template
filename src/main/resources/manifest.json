@@ -1,0 +1,25 @@
+{
+  "Group": "com.paiique.template",
+  "Name": "ExamplePlugin",
+  "Version": "1.0.0",
+  "Description": "Description of your plugin",
+  "Authors": [
+    {
+      "Name": "Paique Studios",
+      "Email": "youremail@nicemail.com",
+      "Url": "https://your-domain.com"
+    },
+    {
+      "Name": "Your Name",
+      "Email": "youremail@nicemail.com",
+      "Url": "https://your-domain.com"
+    }
+  ],
+  "Website": "https://your-domain.com",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": false,
+  "Main": "com.paiique.ExamplePlugin"
+}
