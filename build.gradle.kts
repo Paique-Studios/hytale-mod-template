@@ -12,16 +12,20 @@ repositories {
     mavenLocal()
 }
 
-// You need to run ./gradlew publishToMavenLocal
+val hytaleFile = file("/home/paique/Downloads/hytale-downloader/2026.01.17-4b0f30090/Server/HytaleServer.jar")
 
+if (!hytaleFile.exists()) {
+    throw GradleException("Hytale server JAR file not found at ${hytaleFile.absolutePath}!! You need to download it and put the path at build.gradle.kts:15")
+}
+
+// You need to run ./gradlew publishToMavenLocal
 publishing {
     publications {
         create<MavenPublication>("hytaleServer") {
             groupId = "com.hypixel.hytale"
             artifactId = "HytaleServer-parent"
             version = "1.0-SNAPSHOT"
-            // Path to the hytale server JAR file (in my case below)
-            artifact(file("/home/paique/Downloads/hytale-downloader/2026.01.17-4b0f30090/Server/HytaleServer.jar"))
+            artifact(hytaleFile)
         }
     }
     repositories {
@@ -66,9 +70,10 @@ tasks.processResources {
     }
 }
 
-buildscript {
-    dependencies {
-        classpath(files("/home/paique/hytale-live/buildSrc/build/libs/buildSrc.jar"))
-    }
-}
-apply(plugin = "com.hytale.server")
+// Reserved for future usage, see
+//buildscript {
+//    dependencies {
+//        classpath(files("/home/paique/hytale-live/buildSrc/build/libs/buildSrc.jar"))
+//    }
+//}
+//apply(plugin = "com.hytale.server")
