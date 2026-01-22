@@ -21,5 +21,5 @@
   "OptionalDependencies": {},
   "DisabledByDefault": false,
   "IncludesAssetPack": false,
-  "Main": "com.paiique.ExamplePlugin"
+  "Main": "com.paiique.template.TemplatePlugin"
 }
